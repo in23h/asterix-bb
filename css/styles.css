@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding-top: 70px;
+	font-size: 100%;
+}
+
+#mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	background-color: #000;
+	display: none;
+}
+
+#filters {
+	
+}
+
+#details .detail {
+	position: fixed;
+	z-index: 9999;
+	background: #F8F8F8;
+	border: solid 1px #DDD;
+	padding: 10px;
+	overflow: auto;
+	width: 700px;
+	display: none;
+	top: 0;
+	left: 0;
+}
+
+#details .detail .detailImage {
+	width: 435px;
+	float: left;
+}
+
+#details .detail .detailContent {
+	width: 255px;
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.thumbnails {
+	margin: 0;
+}
+
+.thumbnails > li:hover .thumbnail {
+	box-shadow: 0 8px 10px 1px #444;
+	-moz-box-shadow: 0 8px 10px 1px #444;
+	-o-box-shadow: 0 8px 10px 1px #444;
+	-webkit-box-shadow: 0 8px 10px 1px #444;
+}
+
+.thumbnail {
+	border: solid 1px #DDD;
+	padding: 10px;
+	border-radius: 0;
+	background: #F8F8F8;
+	transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+}
+
+.thumbnail .thumbHeader {
+	border-bottom: solid 1px #DDD;
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
+	overflow: auto;
+}
+
+.thumbnail .thumbFooter {
+	border-top: solid 1px #DDD;
+	margin: 10px 0 0 0;
+	padding: 5px 0 0 0;
+	height: 40px;
+	font-size: 14px;
+}
+
+.thumbnail a {
+	color: #CCC;
+	text-decoration: none;
+}
+
+.thumbnail a:hover {
+	color: #222;
+	text-decoration: none;
+}
+
+.thumbnail a.collectionAdd:hover {
+	color: green;
+	text-decoration: none;
+}
+
+li.collected .thumbnail a.collectionAdd {
+	color: green;
+}
+
+.thumbnail .title {
+	font-weight: bold;
+}
+
+.thumbnail .thumbImage {
+	clear: both;
+}
+
+.thumbnail .thumbImage img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+	height: 60px;
+}
+#footer {
+	background: #F8F8F8;
+	border-top: solid 1px #DDD;
+	color: #000;
+	padding-top: 10px;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+	body {
+		padding-top: 0;
+	}
+	
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	#details {
+		position: relative;
+	}
+	
+	#details .detail {
+		z-index: 9999;
+		background: #F8F8F8;
+		border: solid 1px #DDD;
+		padding: 10px;
+		margin: 0;
+		overflow: auto;
+		width: 50%;
+		display: none;
+		top: 0;
+		left: 0;
+		box-shadow: 0 8px 10px 1px #444;
+		-moz-box-shadow: 0 8px 10px 1px #444;
+		-o-box-shadow: 0 8px 10px 1px #444;
+		-webkit-box-shadow: 0 8px 10px 1px #444;
+	}
+	
+	#details .detail .detailImage {
+		display: none;
+		width: 435px;
+		float: left;
+	}
+	
+	#details .detail .detailContent {
+		width: auto;
+		float: none;
+		margin: 0 0 0 10px;
+	}
+	
+	h1 {
+		font-size: 24px;
+	}
+	
+	h2 {
+		font-size: 18px;
+		line-height: 20px;
+	}
+	
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	
+	.thumbnail .thumbFooter {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+	body {
+		padding-top: 0;
+	}
+	
+	h1 {
+		font-size: 30px;
+	}
+	
+	.thumbnail .thumbFooter {
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
